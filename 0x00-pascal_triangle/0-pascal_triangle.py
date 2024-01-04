@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""A function that returns a list of lists."""
 
 
 def pascal_triangle(n):
-    """Create a function def pascal_triangle(n): that returns a list of
+    """Create a function def pascal_triangle(n): which returns a list of
     lists of integers representing the Pascal’s triangle of n
     """
     if n <= 0:
