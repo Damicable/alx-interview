@@ -7,7 +7,7 @@ def minOperations(n):
     minOperations - A function that calculates the fewest number of
     operations needed to result in exactly n H characters in the file.
     @n: The number of H characters
-    Returns: 0, otherwise int the fewest number of operations
+    Returns: 0, otherwise the fewest number of operations
     """
     if n <= 1:
         return 0
@@ -25,6 +25,3 @@ def minOperations(n):
     min_operations = sum(factors)
 
     return min_operations
-
-
-if __name__ == "__main__":
