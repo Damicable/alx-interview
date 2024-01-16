@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Calculation operations"""
+"""Minimum calculation operations module"""
 
 
 def minOperations(n):
@@ -28,8 +28,3 @@ def minOperations(n):
 
 
 if __name__ == "__main__":
-
-# Example usage:
-n = 9
-result = minOperations(n)
-print(f"Number of operations for {n}: {result}")
