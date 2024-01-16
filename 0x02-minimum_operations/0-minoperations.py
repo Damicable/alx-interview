@@ -6,22 +6,30 @@ def minOperations(n):
     """
     minOperations - A function that calculates the fewest number of
     operations needed to result in exactly n H characters in the file.
-    @n: The number ofOerations needed.
-    Returns: 0 if n is impossible
+    @n: The number of H characters
+    Returns: 0, otherwise int the fewest number of operations
     """
-    if n == 1:
+    if n <= 1:
         return 0
 
-    # Initialize an array to store the minimum number of operations for each value of i
-    val = [float('inf')] * (n + 1)
-    val[1] = 0  # Base case
+    # Initialize factors list
+    factors = []
 
-    # Iterate from 2 to n
+    # Find prime factors of n
     for i in range(2, n + 1):
-        if n % i == 0:
-            # If i is a divisor of n, calculate the minimum number of operations
-            for j in range(2, i + 1):
-                if i % j == 0:
-                    val[i] = min(val[i], val[j] + (i // j))
+        while n % i == 0:
+            factors.append(i)
+            n //= i
 
-    return val[n] if val[n] != float('inf') else 0
+    # Calculate minimum operations
+    min_operations = sum(factors)
+
+    return min_operations
+
+
+if __name__ == "__main__":
+
+# Example usage:
+n = 9
+result = minOperations(n)
+print(f"Number of operations for {n}: {result}")
