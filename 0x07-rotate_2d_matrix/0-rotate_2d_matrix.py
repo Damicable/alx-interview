@@ -11,15 +11,15 @@ def rotate_2d_matrix(matrix):
     n = len(matrix)
     for i in range(int(n / 2)):
         y = (n - i - 1)
-        for j in range(int(i, y):
-            x = (n -1 - j)
-            # Current number
+        for j in range(i, y):
+            x = (n - 1 - j)
+            # current number
             tmp = matrix[i][j]
-            # Change top for left
+            # change top for left
             matrix[i][j] = matrix[x][i]
-            # Change left to bottom
+            # change left for bottom
             matrix[x][i] = matrix[y][x]
-            # Change bottom to right
+            # change bottom for right
             matrix[y][x] = matrix[j][y]
-            # Change right to top
+            # change right to top
             matrix[j][y] = tmp
