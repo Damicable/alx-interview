@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 """0. Prime Game - A game of twos between Maria and Ben"""
 
+
 def isWinner(x, nums):
-    """x - rounds
-    nums - numbers list
+    """
+    isWinner - A function that returns the winner between two prime players
+    @x: rounds number
+    @nums: Array of numbers
+    Return: Name of player that won, otherwise None
     """
     if x <= 0 or nums is None:
         return None
